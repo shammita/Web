@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <nav class="site-navbar z-depth-0 grey darken-4 site-navbar-target sidenav-trigger">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+
+
+                <!--<img src="img/logo.svg" style="width: 180px; margin-top: 10px;">-->
+                <h5>your logo
+
+                </h5>
+
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a class="grey-text" href="#home-section">Home</a>
+                </li>
+
+
+                <li class="logged-in">
+                    <a href="#" class="grey-text" id="logout">Logout</a>
+                </li>
+
+
+                <!--<li class="logged-in">
+                            <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+                        </li>-->
+
+                </span>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <form id="signup-form" action="login.html" class="box" method="post">
+        <h4>SignUp</h4>
+        <input type="email" placeholder="Email" id="signup-email">
+        <input type="password" placeholder="Password" id="signup-password">
+        <input type="submit" value="SignUp">
+
+
+
+
+    </form>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            authDomain: "blossom-corner.firebaseapp.com",
+    databaseURL: "https://blossom-corner.firebaseio.com",
+    projectId: "blossom-corner",
+    storageBucket: "blossom-corner.appspot.com",
+    messagingSenderId: "624307412535",
+    appId: "1:624307412535:web:0c07c3c9a9d079616569b2"
+        
+        };
+		firebase.initializeApp(firebaseConfig);
+        // Initialize Firebase  apiKey: "AIzaSyA5N78Uxxk5o296mln80wsWxRs_4cj7yGU",
+   
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="scripts/auth.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>
